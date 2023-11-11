@@ -1,0 +1,23 @@
+
+<div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <img class="circular--square" src="./assets/img/LOGO.jpg" style="height: 50%; width: 50%;"/>
+            <div class="titulo">
+                DLS
+            </div>
+            <form [formGroup]="loginForm" (submit)="onClick()">
+                <input type="text" name="correo" placeholder="correo" required formControlName="correo">
+                
+                <input type="password" placeholder="password" name="password" required formControlName="password">
+                
+                <button type="submit" title="Ingresar" name="Ingresar" type="submit">Ingresar</button>
+            </form>
+            <div class="pie-form">
+                <a href="/recuperar">¿Perdiste tu contraseña?</a>
+                <a href="/registro">¿No tienes Cuenta? Registrate</a>
+            </div>
+        </div>
+        
+    </div>
+</div>

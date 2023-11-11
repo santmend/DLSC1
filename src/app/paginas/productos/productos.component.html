@@ -1,0 +1,135 @@
+
+<div class="container">
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+  <ul class="navbar-list" [ngClass]="{'active': isMenuOpen}">
+    <li><a href="/inicio">Inicio</a></li>
+    <li><a href="/acerca">Quiénes somos</a></li>
+    <li><a href="/productos">Productos</a></li>
+    <li><a id="cerrarSesionBtn" (click)="refresh()">Cerrar Sesión</a></li>
+  </ul>
+
+
+<section class="contenido">
+    <div class="mostrador" id="mostrador">
+        <div class="fila">
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/27.jpg" alt="">
+                </div>
+                <p class="descripcion">Varilla 9mm x 6m Marca Diaco</p>
+                <span class="precio">$ 17.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/40.jfif" alt="">
+                </div>
+                <p class="descripcion" id>Malla electrosoldada 4mm</p>
+                <span class="precio">$ 125.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/41.jpeg" alt="">
+                </div>
+                <p class="descripcion">Malla electrosoldada 3mm
+                </p>
+                <span class="precio">$ 250.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/33.jpeg" alt="">
+                </div>
+                <p class="descripcion">Cemento argos 50kg</p>
+                <span class="precio">$ 32.000</span>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/34.jpg" alt="">
+                </div>
+                <p class="descripcion">Cemento cemex 50kg</p>
+                <span class="precio">$ 33.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/35.jpg" alt="">
+                </div>
+                <p class="descripcion">Cemento Alion 50kg</p>
+                <span class="precio">$ 31.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/36.webp" alt="">
+                </div>
+                <p class="descripcion">Cemento boyaca 50kg</p>
+                <span class="precio">$ 31.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/30.jpg" alt="">
+                </div>
+                <p class="descripcion">Baño completo marca corona</p>
+                <span class="precio">$ 360.000</span>
+            </div>
+        </div> 
+        <div class="fila">
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/54.jpeg" alt="">
+                </div>
+                <p class="descripcion">Baño completo marca FV</p>
+                <span class="precio">$ 350.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/56.jpg" alt="">
+                </div>
+                <p class="descripcion">Teja plastica #4 1.22m</p>
+                <span class="precio">$ 32.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/59.jpg" alt="">
+                </div>
+                <p class="descripcion">Teja plastica #5 1.53m</p>
+                <span class="precio">$ 38.000</span>
+            </div>
+            <div class="item" onclick="cargar(this)">
+                <div class="contenedor-foto">
+                    <img src="./assets/img/58.jpg" alt="">
+                </div>
+                <p class="descripcion">Teja plastica #8 2.44m</p>
+                <span class="precio">$ 56.000</span>
+            </div> 
+        </div> 
+    </div>
+    <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+    <div class="seleccion" id="seleccion">
+        <div class="cerrar" onclick="cerrar()">
+        </div>
+        <div class="info">
+            <img src="./assets/img/27.jpg" alt="" id="img">
+            <h2 id="modelo"></h2>
+            <span class="precio" id="precio"></span>
+            <div class="fila">
+                <div class="size">
+                    <label for="">Cantidad</label>
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <button>AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+    </div>
+</section>
+<br>

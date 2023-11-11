@@ -1,0 +1,254 @@
+
+<h1>Acciones de Administrador</h1>
+
+<table>
+
+  <tr>
+    <td>Listar Usuarios por Rol:</td>
+    <td><input type="text" name="rol" placeholder="Ingrese un rol" required formControlName="rol" #rol></td>
+
+    <td><a type="button" id="listarBtn" class="action-button" style="cursor: pointer;"
+        (click)="onClick1(rol.value)">OK</a></td>
+  </tr>
+
+
+  <tr>
+    <td>Cambiar Rol:</td>
+    <td><input type="text" name="idUsu" placeholder="Ingrese un id" required formControlName="idUsu" #idUsu [value]>
+    </td>
+    <td><input type="text" name="roll" placeholder="Ingrese un rol" required formControlName="roll" #roll [value]></td>
+    <td><a type="button" id="listarBtn" class="action-button" style="cursor: pointer;"
+        (click)="onClick2(parseInt(idUsu.value), roll.value)">OK</a></td>
+  </tr>
+
+
+  <tr>
+    <td>Eliminar Usuario por id:</td>
+    <td><input type="text" name="idProd" placeholder="Ingrese un id" required formControlName="idProd" #idProd [value]>
+    </td>
+    <td><a type="button" id="listarBtn" class="action-button" style="cursor: pointer;"
+        (click)="onClick3(parseInt(idProd.value))">OK</a></td>
+  </tr>
+
+
+  <tr>
+    <td>Eliminar Producto por id:</td>
+    <td><input type="text" name="idProd" placeholder="Ingrese un id" required formControlName="idProdu" #idProdu
+        [value]></td>
+    <td><a type="button" id="listarBtn" class="action-button" style="cursor: pointer;"
+        (click)="onClick4(parseInt(idProdu.value))">OK</a></td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td>Listar Productos:</td>
+    <td><a id="listarBtn" class="action-button" (click)="obtenerDatos()">OK</a></td>
+  </tr>
+
+
+  <tr>
+    <td>Agregar Producto:</td>
+    <td><input type="text" name="categoria" placeholder="Ingrese un id Categoria" required formControlName="categoria"
+        #categoria [value]></td>
+
+    <td><input type="text" name="nombre" placeholder="Ingrese un nombre" required formControlName="nombre" #nombre
+        [value]></td>
+    <td><input type="text" name="precio" placeholder="Ingrese un precio" required formControlName="precio" #precio
+        [value]></td>
+    <td><a type="button" id="listarBtn" class="action-button" style="cursor: pointer;"
+        (click)="onClick6(categoria.value, nombre.value, precio.value)">OK</a></td>
+  </tr>
+
+</table>
+
+<table id="tablaUsuarios">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Correo electrónico</th>
+      <th>Nombre</th>
+      <th>Password</th>
+      <th>Telefono</th>
+      <th>Rol</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+  </tbody>
+</table>
+
+
+<!-- En tu-componente.component.html -->
+
+<table id="tablaProductos">
+  <thead>
+    <tr>
+      <th>Id Producto </th>
+      <th>Id Categoria</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+  </tbody>
+</table>
+
+<table id="tablaCategoria">
+  <thead>
+    <tr>
+      <th>Id Categoria</th>
+      <th>Codigo</th>
+      <th>Nombre</th>
+      <th>Estado</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+  </tbody>
+</table>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .action-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff7300;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  .action-button:hover {
+    background-color: rgb(16, 19, 22);
+  }
+</style>
+<style>
+  #tablaUsuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  #tablaUsuarios th,
+  #tablaUsuarios td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #tablaUsuarios thead {
+    background-color: #f2f2f2;
+  }
+
+  #tablaUsuarios th {
+    background-color: #d9d9d9;
+    font-weight: bold;
+  }
+
+  #tablaUsuarios tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Define estilos específicos para las columnas si es necesario */
+  #tablaUsuarios th:first-child,
+  #tablaUsuarios td:first-child {
+    width: 50px;
+    /* Ejemplo: Ajusta el ancho de la primera columna */
+  }
+
+  #tablaUsuarios th:nth-child(2),
+  #tablaUsuarios td:nth-child(2) {
+    width: 200px;
+    /* Ejemplo: Ajusta el ancho de la segunda columna */
+  }
+
+
+  /* Agrega más reglas CSS según tus necesidades */
+
+  #tablaProductos,
+  #tablaCategoria {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  #tablaProductos th,
+  #tablaProductos td,
+  #tablaCategoria th,
+  #tablaCategoria th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #tablaProductos thead,
+  #tablaCategoria thead {
+    background-color: #f2f2f2;
+  }
+
+  #tablaProductos th,
+  #tablaCategoria th {
+    background-color: #d9d9d9;
+    font-weight: bold;
+  }
+
+  #tablaProductos tr:hover,
+  #tablaCategoria tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Define estilos específicos para las columnas si es necesario */
+  #tablaProductos th:first-child,
+  #tablaProductos td:first-child,
+  #tablaCategoria th:first-child,
+  #tablaCategoria td:first-child {
+    width: 50px;
+    /* Ejemplo: Ajusta el ancho de la primera columna */
+  }
+
+  #tablaProductos th:nth-child(2),
+  #tablaProductos td:nth-child(2),
+  #tablaCategoria th:nth-child(2),
+  #tablaCategoria td:nth-child(2) {
+    width: 200px;
+    /* Ejemplo: Ajusta el ancho de la segunda columna */
+  }
+</style>

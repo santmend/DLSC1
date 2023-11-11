@@ -1,0 +1,139 @@
+<app-test *ngIf="isActive"></app-test>
+
+
+
+
+
+
+<div class="container">
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+  <ul class="navbar-list" [ngClass]="{'active': isMenuOpen}">
+    <li><a href="/inicio">Inicio</a></li>
+    <li><a href="/acerca">Quiénes somos</a></li>
+    <li><a href="/productos">Productos</a></li>
+    <li><a id="cerrarSesionBtn" (click)="refresh()">Cerrar Sesión</a></li>
+  </ul>
+
+
+
+
+<section class="contenedor sobre-nosotros" *ngIf="isNosotros">
+    
+    <h1 class="titulo animate__animated animate__rubberBand">Nuestra empresa</h1>
+    <div class="contenedor-sobre-nosotros">
+        <img src="./assets/img/volqueta.png" alt="" class="imagen-about.us" style="height: 40%; width: 40%;">
+        <div class="contenido-textos">
+            <h3><span>1</span>Acerca de nosotros</h3>
+            <p>Establecimiento de comerio al por mayor de materiales de construccion, articulos de ferreteria, pinturas,
+                productos de vidrio, arena, bloque, ladrillos, hierro, cemento y PVC.</p>
+            <h3><span>2</span>Encuentra todos tus materiales aqui</h3>
+            <p>Materiales destacados Cemento, Arena, Impermeabilizantes, Tejas, Lavaderos, varilla, llaves, pintura,
+                pegacor, yesos, PVC, pegantes, siliconas, metros, discos, espatulas, toma corriente, interruptores y
+                demas.</p>
+        </div>
+    </div>
+</section>
+
+<section class="portafolio" *ngIf="isPortafolio">
+    <div class="contenedor">
+        <h2 class="titulo animate__animated animate__rubberBand">Sobre nosotros</h2>
+        <div class="galeria-port">
+            <div class="imagen-port">
+                <img src="https://www.siigo.cl/wp-content/uploads/2017/08/Post-Siigo.jpg" alt="">
+                <div class="hover-galeria">
+                    <img src="./assets/img/LOGO.jpg" alt="">
+                    <p><a class="btn btn-primary btn-lg"
+                            href="https://wa.me/573108028789?text=Hola%20deseo%20mi%20factura%20electronica"
+                            style="color: #ffffff "> Pide tu factura electronica aqui!.</a></p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="./assets/img/Mapa.png" alt="">
+                <div class="hover-galeria">
+                    <img src="./assets/img/LOGO.jpg" alt="">
+                    <p><a class="btn btn-primary btn-lg" href="./acerca" style="color: #ffffff "> Nos encontramos en
+                            Facatativa</a></p>
+
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="https://www.las2orillas.co/wp-content/uploads/2021/12/Nequi-Bancolombia.jpg" alt="">
+                <div class="hover-galeria">
+                    <img src="./assets/img/LOGO.jpg" alt="">
+                    <p>Pagos por tranferencia</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="./assets/img/contactenos.png" alt="" style="height: 100%; width: 115%;">
+                <div class="hover-galeria">
+                    <img src="./assets/img/LOGO.jpg" alt="">
+                    <p><a class="btn btn-primary btn-lg"
+                            href="https://wa.me/573108028789?text=Hola%20deseo%20mas%20informacion%20de%20un%20producto"
+                            style="color: #ffffff ">Contactanos!! </a></p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="https://estaticos.qdq.com/swdata/photos/232/232066548/008fe5387773498bbba0e510f137b699.jpg"
+                    alt="">
+                <div class="hover-galeria">
+                    <img src="./assets/img/LOGO.jpg" alt="">
+                    <p><a class="btn btn-primary btn-lg" href="./productos" style="color: #ffffff "> Ver mas
+                            productos.</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clientes contenedor" *ngIf="isClientes">
+    <h2 class="titulo animate__animated animate__rubberBand">Nuestros productos mas vendidos</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/3GQsvUlJ2Cs/maxresdefault.jpg" class="rounded-7" alt="" width="165%"
+                height="100%" />
+            <div class="contenido-texto-card">
+                <h4>Mixto por viajes, metros, lonas</h4>
+                <p>EL mixto es la combinación de arena gruesa natural y grava manufacturada; aporta al concreto
+                    resistencia, dureza y durabilidad. </p>
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn.shopify.com/s/files/1/0262/2160/9026/collections/Sin-titulo-1.jpg?v=1588466189"
+                class="rounded-2" alt="" width="50%" height="80%" />
+            <div class="contenido-texto-card">
+                <h4>Cemento Cemex, Boyaca, Alion, Argos, Tequendama y mas</h4>
+                <p>La mayoría de las construcciones lo emplean, por lo menos, en una de sus etapas: cimientos,
+                    suelos, dinteles, muros, paredes o techos.
+                    El principal beneficio del cemento es ser un material resistente y duradero en la construcción.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://materialesminero.com/wp-content/uploads/2022/06/arena-de-pena.jpg" class="rounded-8"
+                alt="" width="90%" height="90%" />
+            <div class="contenido-texto-card">
+                <h4>Arena amarilla por viajes, metros, lonas</h4>
+                <p>Se suele utilizar para lucir paredes, como última capa de acabado; calidad, limpieza del producto
+                    y cumple con los módulos de finura para la elaboración de morteros de mampostería (pega
+                    estructural y convencional).</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</section>
+
+
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>

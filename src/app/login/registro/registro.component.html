@@ -1,0 +1,23 @@
+
+<div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <img class="circular--square" src="/assets/img/LOGO.jpg" style="height: 50%; width: 50%;"/>
+            <div class="titulo">
+                DLS
+            </div>
+            <form [formGroup]="registroForm" (submit)="onClick()">
+                <input type="text" name="nombre" placeholder="Nombre" required formControlName="nombre">
+                <input type="text" name="telefono" placeholder="Telefono" required formControlName="telefono">
+                <input type="text" name="correo" placeholder="Correo" required formControlName="correo">
+                <input type="password" name="password" placeholder="Contraseña" required formControlName="password">
+                <!--input type="text" name="password2" placeholder="Confirmar Contraseña" required formControlName="password"-->
+                
+                <button type="submit" title="Ingresar" name="Ingresar">Crear Cuenta</button>
+            </form>
+        </div>
+        <div class="inferior">
+            <a href="/login">Volver</a>
+        </div>
+    </div>
+</div>
